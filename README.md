@@ -1,3 +1,6 @@
+> This fork swaps out `jest` for `vitest` as the testing framework. The original
+> README is below.
+
 # Create a GitHub Action Using TypeScript
 
 [![GitHub Super-Linter](https://github.com/scandar/typescript-action-vitest/actions/workflows/linter.yml/badge.svg)](https://github.com/super-linter/super-linter)
