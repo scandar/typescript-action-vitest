@@ -205,7 +205,8 @@ steps:
 ```
 
 For example workflow runs, check out the
-[Actions tab](https://github.com/scandar/typescript-action-vitest/actions)! :rocket:
+[Actions tab](https://github.com/scandar/typescript-action-vitest/actions)!
+:rocket:
 
 ## Usage
 
