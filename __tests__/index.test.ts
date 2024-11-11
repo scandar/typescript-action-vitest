@@ -10,7 +10,7 @@ const runMock = vi.spyOn(main, 'run').mockImplementation(async () => {})
 
 describe('index', () => {
   it('calls run when imported', async () => {
-    await import('../src/index')
+    await import('../src/index.js')
 
     expect(runMock).toHaveBeenCalled()
   })
