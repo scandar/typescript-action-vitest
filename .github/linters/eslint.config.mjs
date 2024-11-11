@@ -24,7 +24,12 @@ export default [
       'coverage',
       'lib',
       '**/*.json',
-      '.github/linters/eslint.config.mjs'
+      'eslint.config.mjs',
+      'vitest.config.mjs',
+      'dist/**/*.ts',
+      'dist/**',
+      '**/*.mjs',
+      '**/*.js'
     ]
   },
   ...compat.extends(

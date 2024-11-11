@@ -3,7 +3,7 @@
  */
 
 import { describe, expect, it } from 'vitest'
-import { wait } from '../src/wait'
+import { wait } from './wait'
 
 describe('wait.ts', () => {
   it('throws an invalid number', async () => {
