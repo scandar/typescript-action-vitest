@@ -1,10 +1,11 @@
+import { FlatCompat } from '@eslint/eslintrc'
+import js from '@eslint/js'
 import typescriptEslint from '@typescript-eslint/eslint-plugin'
-import globals from 'globals'
 import tsParser from '@typescript-eslint/parser'
+import vitest from '@vitest/eslint-plugin'
+import globals from 'globals'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import js from '@eslint/js'
-import { FlatCompat } from '@eslint/eslintrc'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -90,6 +91,16 @@ export default [
       '@typescript-eslint/promise-function-async': 'error',
       '@typescript-eslint/require-array-sort-compare': 'error',
       '@typescript-eslint/space-before-function-paren': 'off'
+    }
+  },
+  {
+    files: ['__tests__/**'],
+    plugins: {
+      vitest
+    },
+    rules: {
+      ...vitest.configs.recommended.rules, // you can also use vitest.configs.all.rules to enable all rules
+      'vitest/max-nested-describe': ['error', { max: 3 }] // you can also modify rules' behavior using option like this
     }
   }
 ]
