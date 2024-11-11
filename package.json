@@ -25,14 +25,14 @@
   },
   "scripts": {
     "bundle": "npm run format:write && npm run package",
-    "ci-test": "npx vitest run --coverage.enabled --coverage.reporter='text-summary'",
+    "ci-test": "npx vitest run --coverage.enabled --coverage.reporter='text'",
     "format:write": "npx prettier --write .",
     "format:check": "npx prettier --check .",
     "lint": "npx eslint . -c ./.github/linters/eslint.config.mjs",
     "local-action": "npx local-action . src/main.ts .env",
     "package": "npx ncc build src/index.ts -o dist --source-map --license licenses.txt",
     "package:watch": "npm run package -- --watch",
-    "test": "vitest run",
+    "test": "vitest",
     "all": "npm run format:write && npm run lint && npm run test && npm run package"
   },
   "license": "MIT",
